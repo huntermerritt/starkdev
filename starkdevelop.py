@@ -19,6 +19,10 @@ def hannah():
 def kate():
     return render_template("kate.html")
 
+@app.route("/plat")
+def plat():
+    return render_template("platford.html")
+
 
 
 
