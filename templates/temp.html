@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Automated web development for professional services.">
+    <meta name="description" content="{{ description }}">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Stark Develop</title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
@@ -72,7 +72,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent" id="navbar" style="min-height: 10vh;">
-  <a class="navbar-brand" href="#home">STARK</a>
+  <a class="navbar-brand" href="#home">{{ title }}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -98,7 +98,7 @@
     <div class="row">
 
 
-        <div class="col-12" style="background: url('/images/stark/computer.jpg') no-repeat center center fixed; background-size: cover; height: 90vh;" id="home">
+        <div class="col-12" style="background: url('../static/{{ file1|safe }}') no-repeat center center fixed; background-size: cover; height: 90vh;" id="home">
 
             <div style="height: 15vh;"></div>
 
@@ -113,14 +113,14 @@
 
                         <div class="col-6" style="text-align: center;">
                             <div style="height: 20vh;"></div>
-                            <h3><strong>Stark Web Development</strong></h3>
-                            <p>Professional websites that stand out.</p>
+                            <h3><strong>{{ title }}</strong></h3>
+                            <p>{{ description }}</p>
                             <a href="#contact" class="btn btn-outline-dark">Get Started</a>
                         </div>
 
                         <div class="col-6" style="text-align: center;">
                             <div style="height: 5vh;"></div>
-                            <img src="./images/stark/stark.png" alt="Web Services" style="max-height: 50vh; max-width: 35vw">
+                            <img src="../static/{{ logofile|safe }}" alt="Web Services" style="max-height: 50vh; max-width: 35vw">
                         </div>
 
                     </div>
@@ -136,7 +136,7 @@
         </div>
 
 
-        <div class="col-12" style="background: url('/images/stark/about.png') no-repeat center center fixed; background-size: cover; min-height: 90vh;" id="about">
+        <div class="col-12" style="background: url('../static/{{ file2|safe }}') no-repeat center center fixed; background-size: cover; min-height: 90vh;" id="about">
 
             <div style="height: 15vh;"></div>
 
@@ -151,11 +151,11 @@
 
                         <div class="col-6">
                             <h3>About Us</h3>
-                            <p>We are a Web Development Company based out of Fort Worth Texas. We work with individuals and companies to build quality websites that allow you to best represent your brand and help your customers.</p>
+                            <p>{{ about }}</p>
                         </div>
 
                         <div class="col-6" style="text-align: center;">
-                            <img src="/images/stark/comp.jpg" alt="Web Services" style="max-height: 50vh; max-width: 35vw">
+                            <img src="../static/{{ aboutfile|safe }}" alt="Web Services" style="max-height: 50vh; max-width: 35vw">
                         </div>
 
                     </div>
@@ -168,7 +168,7 @@
 
         </div>
 
-        <div class="col-12" style="background: url('/images/stark/sketch.png') no-repeat center center fixed; background-size: cover; min-height: 90vh;" id="services">
+        <div class="col-12" style="background: url('../static/{{ file3|safe }}') no-repeat center center fixed; background-size: cover; min-height: 90vh;" id="services">
 
             <div style="height: 15vh;"></div>
 
@@ -190,25 +190,25 @@
                         <div class="col-lg-4">
                             <i class="fas fa-pen-nib" style="font-size: 3em; color: rgb(103,97,246)"></i>
                             <br>
-                            <h4>Design</h4>
+                            <h4>{{ service1 }}</h4>
                             <hr>
-                            <p>We provide web and logo design to help give your online presence a face lift.</p>
+                            <p>{{ description1 }}</p>
                         </div>
 
                         <div class="col-lg-4">
                             <i class="fas fa-hammer" style="font-size: 3em; color: rgb(103,97,246)"></i>
                             <br>
-                            <h4>Development</h4>
+                            <h4>{{ service2 }}</h4>
                             <hr>
-                            <p>We provide custom web development to help give your website a sleek new look.</p>
+                            <p>{{ description2 }}</p>
                         </div>
 
                         <div class="col-lg-4">
                             <i class="fas fa-server" style="font-size: 3em; color: rgb(103,97,246)"></i>
                             <br>
-                            <h4>Hosting</h4>
+                            <h4>{{ service3 }}</h4>
                             <hr>
-                            <p>We host your website on our servers so you don't have to worry about it.</p>
+                            <p>{{ description3 }}</p>
                         </div>
 
                     </div>
@@ -220,7 +220,7 @@
 
         </div>
 
-        <div class="col-12" style="background: url('/images/stark/about.png') no-repeat center center fixed; background-size: cover; min-height: 90vh;" id="contact">
+        <div class="col-12" style="background: url('../static/{{ file4|safe }}') no-repeat center center fixed; background-size: cover; min-height: 90vh;" id="contact">
 
             <div style="height: 5vh;"></div>
 
@@ -229,24 +229,17 @@
 
                 <div class="col-10 card" style="min-height: 60vh;">
                     <div style="height: 5vh;"></div>
-                    <h3>Are you ready to get a new look?</h3>
-                    <div style="height: 5vh;"></div>
+                    <h3>Contact Us</h3>
+                    <div style="height: 15vh;"></div>
 
-                    <form class="form-control" action="https://maker.ifttt.com/trigger/user_signup/with/key/gD43J9IdU3dupnESwI9pUuvIEiSrc63eOODxBPklCy2" method="post" onsubmit="document.getElementById('extra').style.display = 'block'; setTimeout(function(){window.location.reload();},10)">
-                        <p>Email:</p>
-                        <input type="text" placeholder="john@example.com" name="value1" class="form-control">
-                        <br>
-                        <p>Current Website URL</p>
-                        <input type="text" placeholder="http://www.example.com" name="value2" class="form-control">
-                        <br>
-                        <button type="submit" class="btn btn-outline-dark">Submit</button>
-
-                    </form>
-                    <div style="height: 10vh;">
-                        <h3 class="btn btn-success" style="display: none;" id="extra">Information Submitted!</h3>
-                    </div>
+                    <a href="mailto:{{ email }}" class="btn btn-outline-dark">Contact Us</a>
 
                 </div>
+
+                <a onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" href="#" download="page.html">Download</a>
+
+
+                <button onclick="document.location = 'data:text/attachment;,' + document.documentElement.innerHTML;">HIT HERE</button>
 
                 <div class="col-1"></div>
 
@@ -261,34 +254,13 @@
 
 </div>
 
-<!-- Start of Async Drift Code -->
-<script>
-"use strict";
 
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('dm6hv29xge6e');
+<script>
+(function(){
+    document.location =
+        'data:text/attachment;,' + document.documentElement.innerHTML; //To Download Entire Html Source
+})();
 </script>
-<!-- End of Async Drift Code -->
 
 </body>
 </html>
